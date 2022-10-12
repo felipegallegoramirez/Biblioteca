@@ -1,0 +1,108 @@
+.consult{
+    margin: 80px auto;
+    width: 764px;
+}
+.consult p{
+    width: 120px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.consult input{
+    width: 480px;
+    border-radius: 20px;
+    border: none;
+    background-color: #B9B9B9AC;
+    height: 30px;
+}
+
+.consult input:focus{
+    border: black;
+}
+.consult button{
+    background-color: #2C511A;
+    width: 100px;
+    border: none;
+    height: 30px;
+    border-radius: 20px;
+}
+
+.consult *{
+ display: inline-block;
+ margin: 0px 10px;
+ padding: 0px;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin: auto;
+    width: 1400px;
+    grid-gap: 40px;
+}
+
+.card{
+    width: 200px;
+}
+.card img{
+    width: 300px;
+    object-fit: cover;
+}
+.card p{
+    margin: 5px;
+}
+.card__p{
+    font-size: 20px;
+}
+
+.card:hover >.card_detalles{
+    visibility: visible;
+    opacity: 1;
+    transition: visibility 0s linear 0s, opacity 300ms;
+}
+.card_detalles{
+    visibility: hidden;
+    position: absolute;
+    background-color: #091404;
+    height: 300px;
+    width: 300px;
+    opacity: 0;
+    transition: visibility 0s linear 300ms, opacity 300ms;
+    cursor: pointer;
+}
+.card_detalles p{
+    color: white;
+    font-size: 30px;
+    text-align: center;
+    margin: 45% 0px;
+}
+#grid_2{
+    grid-column: 1;
+    grid-row: 4 / 6;
+}
+#grid_2 img{
+    width: 300px;
+    height: 700px;
+}
+#grid_2 .card_detalles{
+    width: 300px;
+    height: 700px;
+}
+
+#grid_2 .card_detalles p{
+    margin: 100% 0px;
+}
+
+#grid_4{
+    grid-column: 3 / 5;
+    grid-row: 2 / 4;
+}
+
+#grid_4 img{
+    width: 660px;
+    height: 700px;
+}
+#grid_4 .card_detalles{
+    width: 660px;
+    height: 700px;
+}
