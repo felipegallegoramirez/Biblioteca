@@ -5,17 +5,20 @@ import { AppComponent } from './app.component';
 import { GaleriaPlantaComponent } from './galeria-planta/galeria-planta.component';
 import { Routes, RouterModule } from '@angular/router';
 import { VistaPlantasComponent } from './vista-plantas/vista-plantas.component';
+import { AboutComponent } from './about/about.component';
 
 const routes: Routes = [
   { path: 'GaleriaPlantas', component: GaleriaPlantaComponent },
   { path: 'VerPlantas', component: VistaPlantasComponent },
+  { path: 'About-us', component: AboutComponent }
 ];
 
 @NgModule({
   declarations: [
     AppComponent,
     GaleriaPlantaComponent,
-    VistaPlantasComponent
+    VistaPlantasComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,
