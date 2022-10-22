@@ -1,111 +1,113 @@
-							/*Div Boton*/
-.button button {
-	border-radius: 20px;
-	width: 127px;
-	height: 47px;
-	background-color: #CFCFCF;
-	margin-top: 50px;
+input:focus{
+	outline: 1px solid #465902;
+}
+input:hover{
+	border-color: black;
+}
+p{
+	font-weight: bold;
+	margin: 10px 0px;
+}
+input[type=text]{
+ padding: 5px;
+ box-sizing: border-box;
+ border-radius: 12px;
+ border: 1px solid black;
 }
 
-#button__1 {
-	margin-left: 90px;
+
+textarea{
+	padding: 5px;
+	box-sizing: border-box;
+	border-radius: 12px;
+	border: 1px solid black;
 }
 
-							/*Div picture*/
-.picture {
+textarea:active{
+	outline: #465902;
+	}
+
+textarea:focus{
+	outline: 1px solid #465902;
+	}
+	textarea:hover{
+		border-color: black;
+	}
+.first_left .input input{
+	width: 100%;
+}
+
+.first{
+	display: flex;
+	align-items: flex-end;
+}
+.first>div{
+	width: 50%;
 	display: inline-block;
-	position: relative;
-	border:  solid 4px black;
-	width: 537px;
-	height: 152px;
-	position: absolute;
-	margin-left: 825px;
-	margin-top: 60px;
+	padding: 10px;
+	box-sizing: border-box;
 }
 
-.picture img {
-	width: 35px;
-	height: 35px;
-	display: block;
-}
-
-.picture a {
-	display: block;
+.first >.first_right{
+	height: 200px;
 	text-align: center;
-	padding-top: 20px;
+	border: 2PX solid black;
+}
+.first_right img{
+	width: 150px;
 }
 
-.picture button {
-	display: block;
-	width: 295px;
-	height: 35px;
-	background-color: #3E7600;
-	color: #ffffff;
+.central{
+	padding: 10px;
+}
+.area textarea{
+	width: 100%;
+	resize: none;
+	height: 150px;
 }
 
-							/*div input1*/
-.input {
-	margin-top: 100px;
+.bot{
+	padding: 10px;
 }
 
-.input h3 {
-	margin-top: 20px;
-}
-.input__names input {
-	width: 638px;
-	height: 34px;
-	border-radius: 5px;
+.bot .title{
+ font-size: 24px;
 }
 
-.input__form input{
-	width: 1440px;
-	height: 160px;
-	border-radius: 5px;
+.bot .grid{
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-gap: 10px;
 }
 
-.input, .input2 h2{
-	position: relative;
-	margin-left: 90px ;
+.bot .grid .input input{
+	width: 100%;
+	background-color: #ddd;
 }
 
-							/*Div input2*/
-.input2 h4{
-	margin-top: 15px;
+.central .input input{
+	width: 100%;
 }
 
-.input2__month1,.input2__month2{
-	display: inline-block;
-}
-
-.input2__month2 {
-	margin-left: 80;
-}
-
-.input2 h2 {
-	padding-top: 30px;
-	padding-bottom: 30px;
-}
-
-.input2 input, h4{
-	position: relative;
-	margin-left: 100px ;
-}
-
-.input2 input {
-	width: 623;
-	height: 34;
+.submit{
+	background-color: #465902;
+	margin: auto;
+	color: white;
+	padding: 10px;
+	width: 200px;
+	border: none;
 	border-radius: 20px;
-	background-color: #CFCFCF;
 }
-
-							/*submit button*/
-#submit {
-	width: 160;
-	height: 35;
-	background-color: #3E7600;
-	color: #ffffff;
+.div_submit{
+	width: 100%;
+	margin: 40px 0px;
+	text-align: center;
 }
-
-.input__center {
-	margin: 60px 638px 100px;
+.submit:active{
+	background-color: white;
+	color: #465902;
+	padding: 10px;
+	width: 200px;
+	outline: 2px solid #465902;
+	border-radius: 20px;
 }

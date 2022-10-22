@@ -1,0 +1,20 @@
+
+<div class="consult">
+    <p>Palabra Clave</p>
+    <input type="text">
+    <button>🔎</button>
+</div>
+
+
+<div class="grid" id="padre">
+    <div class="card" *ngFor="let item of items" routerLink="/VerInsectos/{{item.id}}">
+        <div  class="card_detalles">
+            <p>Detalles</p>
+        </div>
+        <img src="{{item.url}}">
+        <p class="card__p"><b>{{item.nombre}}</b></p>
+        <p>{{item.nombre_cientifico}}</p>
+
+    </div>
+    
+</div>

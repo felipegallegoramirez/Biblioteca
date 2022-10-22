@@ -1,86 +1,115 @@
-<div>
+<div class="first">
+  <div class="first_left">
+    <div class="input">
+      <p>Nombre</p>
+      <input id="nombre" type="text" />
+    </div>
 
-	<div class="button">
-		<button id="button__1">Aves</button>
-		<button>Insectos</button>
-		<button>Insumos</button>
-		<button>Plantas</button>
+    <div class="input">
+      <p>Nombre Cientifico</p>
+      <input id="nombre_cientifico" type="text" />
+    </div>
+  </div>
+
+  <div class="first_right">
+    <img src="https://rockcontent.com/es/wp-content/uploads/sites/3/2019/02/Consejos-para-hacer-ima%CC%81genes-increi%CC%81bles-1024x538.png.webp">
+    <p>Agregar la foto</p>
+    <input id="foto" type="file" />
+  </div>
+
+</div>
+
+  <div class="central">
+    <div class="area">
+      <p>Caracteristicas</p>
+      <textarea id="caracteristicas"></textarea>
+    </div>
+
+    <div class="area">
+      <p>Condiciones</p>
+      <textarea id="condiciones"></textarea>
+    </div>
+
+    <div class="area">
+      <p>Metodo Cultivo</p>
+      <textarea id="metodo_cultivo"></textarea>
+    </div>
+
+    <div class="area">
+      <p>Floracion</p>
+      <textarea id="floracion"></textarea>
+    </div>
+
+    <div class="area">
+      <p>Problemas</p>
+      <textarea id="problemas"></textarea>
+    </div>
+  </div>
+
+  <div class="bot">
+    <p class="title">Mes a mes</p>
+
+    <div class="grid">
+
+		<div class="input">
+			<p>Enero</p>
+			<input id="enero" type="text" />
+		  </div>
+		  <div class="input">
+			<p>Julio</p>
+			<input id="julio" type="text" />
+		  </div>
+		  <div class="input">
+			<p>Febrero</p>
+			<input id="febrero" type="text" />
+		  </div>
+		  <div class="input">
+			<p>Agosto</p>
+			<input id="agosto" type="text" />
+		  </div>
+		  <div class="input">
+			<p>Marzo</p>
+			<input id="marzo" type="text" />
+		  </div>
+		  <div class="input">
+			<p>Septiembre</p>
+			<input id="septiembre" type="text" />
+		  </div>
+		  <div class="input">
+			<p>Abril</p>
+			<input id="abril" type="text" />
+		  </div>
+		  <div class="input">
+			<p>Octubre</p>
+			<input id="octubre" type="text" />
+		  </div>
+		  <div class="input">
+			<p>Mayo</p>
+			<input id="mayo" type="text" />
+		  </div>
+		  <div class="input">
+			<p>Noviembre</p>
+			<input id="noviembre" type="text" />
+		  </div>
+		  <div class="input">
+			<p>Junio</p>
+			<input id="junio" type="text" />
+		  </div>
+		  <div class="input">
+			<p>Diciembre</p>
+			<input id="diciembre" type="text" />
+		  </div>
+		
 	</div>
+  </div>
 
-	<div class="picture">
-		<div>
-			<img src="https://i.pinimg.com/564x/dd/75/07/dd750788002e82483d5a70b1e33a1c83.jpg" width="30" lenght="30">
-		</div>
-		<a href="">Agregar la foto</a>
-
-		<div class="picture__center">
-			<button id="photo">
-				📷 Agregar foto desde el computador
-			</button>
-		</div>
-	</div>
-
+  <div class="central">
 	<div class="input">
-		<form>
+		<p>Dato Curioso</p>
+		<input id="dato_curioso" type="text" />
+	  </div>
+  </div>
 
-			<div class="input__names">
-				<h3>Nombre</h3>
-				<input type="text">
-				<h3>Nombre Cientifico</h3>
-				<input type="text">
-			</div>
-
-			<div class="input__form">	
-				<h3>Caracteristicas</h3>
-				<input type="text">
-				<h3>Condiciones</h3>
-				<input type="text">
-				<h3>Metodo de cultivo</h3>
-				<input type="text">
-				<h3>Floración</h3>
-				<input type="text">
-				<h3>Problemas</h3>
-				<input type="text">
-			</div>
-
-		</form>
-	</div>
-
-	<div class="input2">
-		<form>
-			<h2>Mes a mes</h2>
-			<div class="input2__month1">
-				<h4>Enero</h4>
-				<input type="text">
-				<h4>Febrero</h4>
-				<input type="text">
-				<h4>Marzo</h4>
-				<input type="text">
-				<h4>Abril</h4>
-				<input type="text">
-				<h4>Mayo</h4>
-				<input type="text">
-				<h4>Junio</h4>
-				<input type="stext">
-			</div>
-			
-			<div class="input2__month2">
-				<h4>Julio</h4>
-	 			<input type="text">
- 				<h4>Agosto</h4>
-				<input type="text">
-				<h4>Septiembre</h4>
-				<input type="text">
-				<h4>Octubre</h4>
-				<input type="text">
-				<h4>Noviembre</h4>
-				<input type="text">
-				<h4>Diciembre</h4>
-				<input type="text">
-			</div>
-
-			<div class="input__center"><input type="Submit" id="submit"></div>
-			
-		</form>
-	</div>
-</div>	
+<div class="div_submit">
+	<button class="submit" (click)="enviar()">Publicar</button>
+</div>
