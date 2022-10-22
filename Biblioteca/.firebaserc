@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "galeria-be4c5"
+  },
+  "targets": {
+    "galeria-be4c5": {
+      "hosting": {
+        "Biblioteca": [
+          "galeria-be4c5"
+        ]
+      }
+    }
+  }
+}

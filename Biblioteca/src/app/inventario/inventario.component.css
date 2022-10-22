@@ -1,0 +1,41 @@
+.central{
+    margin: 200px auto;
+    width: 1400px;
+    min-height: 500px;
+}
+.titles{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-gap: 40px;
+}
+
+.titles p{
+    font-size: 20px;
+    font-weight: bold;
+    color: #F24F1B;
+}
+
+.titles p{
+    width: 100px;
+}
+
+.items{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-gap: 40px;
+}
+
+.items >div,p{
+    width: 100px;
+}
+
+.items>div button{
+background-color: #F24F1B;
+color: white;
+font-weight: bold;
+font-size: 20px;
+border-radius: 20px;
+width: 40px;
+height: 40px;
+margin: 0px 5px;
+}

@@ -1,0 +1,113 @@
+input:focus{
+	outline: 1px solid #465902;
+}
+input:hover{
+	border-color: black;
+}
+p{
+	font-weight: bold;
+	margin: 10px 0px;
+}
+input[type=text]{
+ padding: 5px;
+ box-sizing: border-box;
+ border-radius: 12px;
+ border: 1px solid black;
+}
+
+
+textarea{
+	padding: 5px;
+	box-sizing: border-box;
+	border-radius: 12px;
+	border: 1px solid black;
+}
+
+textarea:active{
+	outline: #465902;
+	}
+
+textarea:focus{
+	outline: 1px solid #465902;
+	}
+	textarea:hover{
+		border-color: black;
+	}
+.first_left .input input{
+	width: 100%;
+}
+
+.first{
+	display: flex;
+	align-items: flex-end;
+}
+.first>div{
+	width: 50%;
+	display: inline-block;
+	padding: 10px;
+	box-sizing: border-box;
+}
+
+.first >.first_right{
+	height: 200px;
+	text-align: center;
+	border: 2PX solid black;
+}
+.first_right img{
+	width: 150px;
+}
+
+.central{
+	padding: 10px;
+}
+.area textarea{
+	width: 100%;
+	resize: none;
+	height: 150px;
+}
+
+.bot{
+	padding: 10px;
+}
+
+.bot .title{
+ font-size: 24px;
+}
+
+.bot .grid{
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-gap: 10px;
+}
+
+.bot .grid .input input{
+	width: 100%;
+	background-color: #ddd;
+}
+
+.central .input input{
+	width: 100%;
+}
+
+.submit{
+	background-color: #465902;
+	margin: auto;
+	color: white;
+	padding: 10px;
+	width: 200px;
+	border: none;
+	border-radius: 20px;
+}
+.div_submit{
+	width: 100%;
+	margin: 40px 0px;
+	text-align: center;
+}
+.submit:active{
+	background-color: white;
+	color: #465902;
+	padding: 10px;
+	width: 200px;
+	outline: 2px solid #465902;
+	border-radius: 20px;
+}

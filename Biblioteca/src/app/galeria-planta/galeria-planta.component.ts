@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import plant from '../Interfaces/plant';
+import { CentralService } from '../Services/central.service';
 
 @Component({
   selector: 'app-galeria-planta',
@@ -7,9 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GaleriaPlantaComponent implements OnInit {
 
-  constructor() { }
-
+  constructor(private CentralService:CentralService) { }
+  items:plant[]=[]
   ngOnInit(): void {
+    this.CentralService.getplants().subscribe(plants =>{
+      this.items=plants
+    })
+
+    
   }
 
 }

@@ -1,0 +1,15 @@
+
+<div class="buttons">
+    <button id="b1" (click)="cambiar(1)" class="selected1" >Plantas</button>
+    <button id="b2" (click)="cambiar(2)">Aves</button>
+    <button id="b3" (click)="cambiar(3)">Insectos</button>
+    <button id="b4" (click)="cambiar(4)">Insumo</button>
+</div>
+
+<div class="central">
+<app-input *ngIf="s1" ></app-input>
+<app-inputaves *ngIf="s2"></app-inputaves>
+<app-inputinsectos *ngIf="s3"></app-inputinsectos>
+<app-inputinventario *ngIf="s4"></app-inputinventario>
+
+</div>

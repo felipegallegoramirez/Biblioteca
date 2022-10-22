@@ -1,0 +1,40 @@
+input:focus{
+	outline: 1px solid #F24F1B;
+}
+input:hover{
+	border-color: black;
+}
+p{
+	font-weight: bold;
+	margin: 10px 0px;
+}
+input{
+ padding: 5px;
+ box-sizing: border-box;
+ border-radius: 12px;
+ border: 1px solid black;
+ width: 100%;
+}
+
+.submit{
+	background-color: #F24F1B;
+	margin: auto;
+	color: white;
+	padding: 10px;
+	width: 200px;
+	border: none;
+	border-radius: 20px;
+}
+.div_submit{
+	width: 100%;
+	margin: 40px 0px;
+	text-align: center;
+}
+.submit:active{
+	background-color: white;
+	color: #F24F1B;
+	padding: 10px;
+	width: 200px;
+	outline: 2px solid #F24F1B;
+	border-radius: 20px;
+}

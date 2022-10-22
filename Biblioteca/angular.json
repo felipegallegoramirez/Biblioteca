@@ -98,6 +98,16 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "prerender": false,
+            "ssr": false,
+            "browserTarget": "Biblioteca:build:production",
+            "firebaseProject": "galeria-be4c5",
+            "firebaseHostingSite": "galeria-be4c5"
+          }
         }
       }
     }

@@ -1,0 +1,37 @@
+.buttons{
+    width: 90%;
+    margin: 150px auto 0px;
+}
+
+.buttons button{
+    background-color: #ddd;
+    padding: 10px;
+    font-weight: bold;
+    font-size: 20px;
+    width: 200px;
+    border: none;
+    border-radius: 20px;
+    display: inline-block;
+    margin: 0px 10px;
+}
+
+.central{
+    width: 90%;
+    margin: 40px auto;
+}
+
+.selected1{
+    outline: 4px solid #465902;
+}
+
+.selected2{
+    outline: 4px solid #023855;
+}
+
+.selected3{
+    outline: 4px solid #F2A922;
+}
+
+.selected4{
+    outline: 4px solid #465902;
+}

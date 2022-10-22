@@ -1,0 +1,23 @@
+<div class="central">
+
+<div class="titles">
+    <p>Codigo</p>
+    <p>Nombre</p>
+    <p>Tipo</p>
+    <p>Cantidad</p>
+    <p>Lorem</p>
+    <p>Existencias</p>
+</div>
+<div *ngFor="let item of items" class="items">
+    <p>{{item.id}}</p>
+    <p>{{item.nombre}}</p>
+    <p>{{item.tipo}}</p>
+    <p>{{item.cantidad}}</p>
+    <p>{{item.random}}</p>
+    <div>
+        <button>+</button>
+        <button>-</button>
+    </div>
+</div>
+
+</div>
