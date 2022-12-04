@@ -19,6 +19,8 @@ import { VistaInsectosComponent } from './vista-insectos/vista-insectos.componen
 import { InventarioComponent } from './inventario/inventario.component';
 import { InputinventarioComponent } from './inputinventario/inputinventario.component';
 import { AboutComponent } from './about/about.component';
+import { NotificacionComponent } from './notificacion/notificacion.component';
+import { LoginComponent } from './login/login.component';
 
 const routes: Routes = [
   { path: 'GaleriaPlantas', component: GaleriaPlantaComponent },
@@ -29,7 +31,13 @@ const routes: Routes = [
   { path: 'Inventario', component: InventarioComponent },
   { path: 'VerInsectos/:id', component: VistaInsectosComponent },
   { path: 'Input', component: CentralinputComponent },
-  { path: 'About-us', component: AboutComponent }
+  { path: 'About-us', component: AboutComponent },
+  { path: 'EditaAves/:id', component: InputavesComponent },
+  { path: 'EditaPlantas/:id', component: InputComponent },
+  { path: 'EditaAves/:id', component: InputavesComponent },
+  { path: 'EditaInsectos/:id', component: InputinsectosComponent },
+  { path: 'Login/:ac/:id', component: LoginComponent },
+  { path: 'Login/:ac', component: LoginComponent }
 ];
 
 @NgModule({
@@ -47,7 +55,9 @@ const routes: Routes = [
     VistaAvesComponent,
     VistaInsectosComponent,
     InventarioComponent,
-    InputinventarioComponent
+    InputinventarioComponent,
+    NotificacionComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

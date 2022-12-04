@@ -45,5 +45,6 @@ export default interface plant{
       mes?: Array<string>
       dato_curioso?:string;
       url?:string;
+      imagenid?:string;
 
   }

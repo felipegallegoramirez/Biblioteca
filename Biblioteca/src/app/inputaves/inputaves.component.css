@@ -1,3 +1,7 @@
+.ocultar{
+	visibility: hidden;
+}
+
 input:focus{
 	outline: 1px solid #023855;
 }
@@ -8,6 +12,7 @@ p{
 	font-weight: bold;
 	margin: 10px 0px;
 }
+
 input[type=text]{
  padding: 5px;
  box-sizing: border-box;
@@ -49,12 +54,15 @@ textarea:focus{
 }
 
 .first >.first_right{
+	cursor: pointer;
 	height: 200px;
 	text-align: center;
 	border: 2PX solid black;
 }
 .first_right img{
 	width: 150px;
+	height: 150px;
+	object-fit: contain;
 }
 
 .central{

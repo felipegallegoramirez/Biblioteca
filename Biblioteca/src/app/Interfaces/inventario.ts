@@ -3,6 +3,6 @@ export default interface inventario{
       id?:string;
       nombre?:string;
       tipo?:string;
-      cantidad?:Number;
+      cantidad?:number;
       random?:string;
   }

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { info } from 'console';
 import ave from '../Interfaces/ave';
 import { CentralService } from '../Services/central.service';
 
@@ -11,21 +12,26 @@ import { CentralService } from '../Services/central.service';
 export class VistaAvesComponent implements OnInit {
 
   constructor(private CentralService:CentralService, public activatedRoute:ActivatedRoute) { }
-  items:ave[]=[]
+  items:ave | any=[]
   real:any 
+  id:string="";
 
   ngOnInit(): void {
-    this.activatedRoute.params.subscribe(params => { 
-      var id= params['id'];
-    this.CentralService.getaves().subscribe(ave =>{
-      this.items=ave
-      var a=this.items.find((x:ave) =>x.id==id)
-      if(a!=undefined){this.real = a}
-        
-  
+     this.activatedRoute.params.subscribe(params => { 
+      this.id = params['id'];
+      if (this.id) {
+        this.info()
+      }
       
-    })
+
+
   })
+  }
+
+  async info(){
+    var a = await this.CentralService.getave(this.id)
+    var info = a.data() as ave
+    this.real=info
   }
 
 }

@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
-import { Firestore, collection, addDoc, collectionData, doc, deleteDoc, updateDoc } from '@angular/fire/firestore';
+import { Firestore, collection, addDoc, collectionData, doc, deleteDoc, updateDoc, getDoc } from '@angular/fire/firestore';
 
-import { Storage, ref, uploadBytes, listAll, getDownloadURL } from '@angular/fire/storage';
-import { resolve } from 'dns';
+import { Storage, ref, uploadBytes, listAll, getDownloadURL,deleteObject } from '@angular/fire/storage';
+import { promises, resolve } from 'dns';
 import { response } from 'express';
 
 
@@ -33,19 +33,29 @@ export class CentralService {
     return collectionData(plantRef, { idField: 'id' }) as Observable<plant[]>;
   }
 
-  deleteplant(plant: plant) {
-    const plantDocRef = doc(this.firestore, `plants/${plant.id}`);
-    return deleteDoc(plantDocRef);
+
+  async getplant(id:string): Promise<any> {
+    const aveRef = doc(this.firestore, "plants", id)
+    return  await getDoc(aveRef);
   }
+
+  async putplant(id:string,ave:any): Promise<any> {
+    const aveRef = doc(this.firestore, "plants", id)
+    return  await updateDoc(aveRef,ave);
+  }
+
+  async deleteplant(id: string) {
+    const aveRef=doc(this.firestore, "plants", id)
+    return  await deleteDoc(aveRef);
+  }
+
 
   //!Imagen
 
-  async uploadimagen(file:File): Promise<string>{
-    console.log(file)
+  async uploadimagen(file:File): Promise<Array<string>>{
+    var a = Math.floor(Math.random() * 99999999999999999)
+    const imgRef = ref(this.storage, `images/${a}`);
 
-    const imgRef = ref(this.storage, `images/${file.name}`);
-
-    console.log(imgRef)
 
      let x = await uploadBytes(imgRef, file)
       .then(response => {
@@ -55,7 +65,11 @@ export class CentralService {
       .catch(error => console.log(error));
       const url = await getDownloadURL(imgRef);
       console.log(url)
-      return url
+      return [url,""+a]
+  }
+  async deleteimagen(id:string){
+    const imgRef = ref(this.storage, `images/${id}`);
+    await deleteObject(imgRef)
   }
 
   //!ave
@@ -70,9 +84,19 @@ export class CentralService {
     return collectionData(aveRef, { idField: 'id' }) as Observable<ave[]>;
   }
 
-  deleteave(ave: ave) {
-    const aveDocRef = doc(this.firestore, `aves/${ave.id}`);
-    return deleteDoc(aveDocRef);
+  async getave(id:string): Promise<any> {
+    const aveRef = doc(this.firestore, "aves", id)
+    return  await getDoc(aveRef);
+  }
+
+  async putave(id:string,ave:any): Promise<any> {
+    const aveRef = doc(this.firestore, "aves", id)
+    return  await updateDoc(aveRef,ave);
+  }
+
+  async deleteave(id: string) {
+    const aveRef=doc(this.firestore, "aves", id)
+    return  await deleteDoc(aveRef);
   }
 
   //!insecto
@@ -87,9 +111,20 @@ export class CentralService {
     return collectionData(insectoRef, { idField: 'id' }) as Observable<insecto[]>;
   }
 
-  deleteinsecto(insecto: insecto) {
-    const insectoDocRef = doc(this.firestore, `insectos/${insecto.id}`);
-    return deleteDoc(insectoDocRef);
+
+  async getinsecto(id:string): Promise<any> {
+    const aveRef = doc(this.firestore, "insectos", id)
+    return  await getDoc(aveRef);
+  }
+
+  async putinsecto(id:string,ave:any): Promise<any> {
+    const aveRef = doc(this.firestore, "insectos", id)
+    return  await updateDoc(aveRef,ave);
+  }
+
+  async deleteinsecto(id: string) {
+    const aveRef=doc(this.firestore, "insectos", id)
+    return  await deleteDoc(aveRef);
   }
 
 
@@ -100,14 +135,24 @@ export class CentralService {
       return addDoc(inventarioRef, inventario);
     }
   
-    getinventario(): Observable<inventario[]> {
+    getinventarios(): Observable<inventario[]> {
       const inventarioRef = collection(this.firestore, 'inventarios');
       return collectionData(inventarioRef, { idField: 'id' }) as Observable<inventario[]>;
     }
   
-    deleteinventario(inventario: inventario) {
-      const inventarioDocRef = doc(this.firestore, `inventarios/${inventario.id}`);
-      return deleteDoc(inventarioDocRef);
+    async getinventario(id:string): Promise<any> {
+      const aveRef = doc(this.firestore, "inventarios", id)
+      return  await getDoc(aveRef);
+    }
+  
+    async putinventario(id:string,ave:any): Promise<any> {
+      const aveRef = doc(this.firestore, "inventarios", id)
+      return  await updateDoc(aveRef,ave);
+    }
+  
+    async deleteinventario(id: string) {
+      const aveRef=doc(this.firestore, "inventarios", id)
+      return  await deleteDoc(aveRef);
     }
 
   

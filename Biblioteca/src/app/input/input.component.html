@@ -1,3 +1,7 @@
+<div id="eliminar" class="div_submit ocultar">
+	<button  class="submit " (click)="eliminar()">Eliminar</button>
+</div>
+
 <div class="first">
   <div class="first_left">
     <div class="input">
@@ -11,10 +15,10 @@
     </div>
   </div>
 
-  <div class="first_right">
-    <img src="https://rockcontent.com/es/wp-content/uploads/sites/3/2019/02/Consejos-para-hacer-ima%CC%81genes-increi%CC%81bles-1024x538.png.webp">
-    <p>Agregar la foto</p>
-    <input id="foto" type="file" />
+  <div  class="first_right">
+    <img (click)="photoInput.click()"  [src]="photoSelected ">
+    <p (click)="photoInput.click()">Agregar la foto</p>
+    <input #photoInput  (change)="onPhotoSelected($event)" id="foto" type="file" accept="image/png, image/jpeg"  style="visibility: hidden;"/>
   </div>
 
 </div>

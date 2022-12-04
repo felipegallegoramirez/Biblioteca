@@ -11,21 +11,26 @@ import { CentralService } from '../Services/central.service';
 })
 export class VistaPlantasComponent implements OnInit {
   constructor(private CentralService:CentralService, public activatedRoute:ActivatedRoute) { }
-  items:plant[]=[]
+  items:plant | any=[]
   real:any 
+  id:string="";
 
   ngOnInit(): void {
-    this.activatedRoute.params.subscribe(params => { 
-      var id= params['id'];
-    this.CentralService.getplants().subscribe(plants =>{
-      this.items=plants
-      var a=this.items.find((x:plant) =>x.id==id)
-      if(a!=undefined){this.real = a}
-        
-  
+     this.activatedRoute.params.subscribe(params => { 
+      this.id = params['id'];
+      if (this.id) {
+        this.info()
+      }
       
-    })
+
+
   })
+  }
+
+  async info(){
+    var a = await this.CentralService.getplant(this.id)
+    var info = a.data() as plant
+    this.real=info
   }
 
 }

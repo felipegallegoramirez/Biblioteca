@@ -14,6 +14,8 @@
     border: none;
     background-color: #B9B9B9AC;
     height: 30px;
+    padding: 0px 10px;
+    box-sizing: border-box;
 }
 
 .consult input:focus{
@@ -25,7 +27,15 @@
     border: none;
     height: 30px;
     border-radius: 20px;
+    cursor: pointer;
 }
+
+.consult button:active{
+    background-color: white;
+    outline: 3px solid #2C511A;
+
+}
+
 
 .consult *{
  display: inline-block;
@@ -46,6 +56,7 @@
 }
 .card img{
     width: 300px;
+    height: 300px;
     object-fit: cover;
 }
 .card p{
@@ -77,33 +88,33 @@
     margin: 45% 0px;
 }
 
-.grid >:first-child{
+.grid >:nth-child( 7 ){
     grid-column: 1;
     grid-row: 4 / 6;
 }
-.grid >:first-child img{
+.grid >:nth-child( 7 ) img{
     width: 300px;
     height: 700px;
 }
-.grid >:first-child  .card_detalles{
+.grid >:nth-child( 7 )  .card_detalles{
     width: 300px;
     height: 700px;
 }
 
-.grid >:first-child  .card_detalles p{
+.grid >:nth-child( 7 )  .card_detalles p{
     margin: 100% 0px;
 }
 
-.grid >:nth-child( 2 ){
+.grid >:nth-child( 8 ){
     grid-column: 3 / 5;
     grid-row: 2 / 4;
 }
 
-.grid >:nth-child( 2 ) >img{
+.grid >:nth-child( 8 ) >img{
     width: 660px;
     height: 700px;
 }
-.grid >:nth-child( 2 ) .card_detalles{
+.grid >:nth-child( 8 ) .card_detalles{
     width: 660px;
     height: 700px;
 }

@@ -15,8 +15,8 @@
     <p>{{item.cantidad}}</p>
     <p>{{item.random}}</p>
     <div>
-        <button>+</button>
-        <button>-</button>
+        <button (click)="subir(item,item.id)">+</button>
+        <button (click)="bajar(item,item.id)">-</button>
     </div>
 </div>
 

@@ -1,3 +1,22 @@
+button{
+    background-color: #465902;
+    padding: 10px;
+    font-weight: bold;
+    font-size: 20px;
+    width: 100px;
+    border: none;
+    border-radius: 20px;
+    display: inline-block;
+    margin: 0px 10px;
+    position: absolute;
+    color: white;
+    right: 100px;
+    cursor: pointer;
+}
+p{
+    hyphens: manual;
+}
+
 .sup{
     display: flex;
     vertical-align: top;
@@ -9,14 +28,15 @@
 .sup >div{
     display: inline-block;
     width: 50%;
+    max-width: 50%;
     padding: 0px 10px;
     box-sizing: border-box;
-    height: 500px;
 }
+
 
 .sup_left img{
     width: 100%;
-    height: 500px;
+    max-height: 40vw;
     object-fit: cover;
 }
 
@@ -39,7 +59,7 @@ display: inline-block;
 }
 .inf > div {
     box-sizing: border-box;
-    height: 500px;
+
     padding: 0px 10px;
 }
 .inf_left{
@@ -68,9 +88,7 @@ display: inline-block;
     display: inline-block;
 }
 
-.grid > div  > :first-child{
-font-weight: bold;
-}
+
 
 .dato_interesante{
     background-color: #465902;
