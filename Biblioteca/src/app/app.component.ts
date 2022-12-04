@@ -30,4 +30,14 @@ export class AppComponent {
 
 
   }
+  barra() {
+    
+    let div = <HTMLFormElement> document.getElementById("menu");
+    console.log(div.className)
+    if(div.className == "links"){
+      div.className = "bar_links"
+    }else{
+      div.className = "links"
+    }
+  }
 }
