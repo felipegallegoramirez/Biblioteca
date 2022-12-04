@@ -1,4 +1,10 @@
+h2{
+    font-size: 14px;
+}
+
+
 nav{
+    position: relative;
     display: flex;
     padding: 0px 80px;
     height: 80px;
@@ -11,7 +17,7 @@ nav *{
 .links a{
     color: black;
 }
-.logo > .nombre >h2{
+.logo > .nombre >h2,.logo > .nombre >h1{
     display: block;
     position: relative;
     margin: 0px;
@@ -19,12 +25,12 @@ nav *{
     z-index: 100;
 }
 .logo > .nombre {
-    margin: 20px 17px;
+    margin: 20px 10px;
 }
 .logo img{
     position: absolute;
     z-index: 0;
-    width: 130px;
+    width: 150px;
 }
 ul{
     text-decoration: none;
@@ -82,3 +88,87 @@ footer > div{
     padding: 0px;
 }
 
+router-outlet{
+    width: 100vw;
+    overflow: hidden;
+}
+
+.btn_barra{
+    display: none !important;
+}
+
+@media screen and (max-width:600px) {
+    .links{
+        display: none !important;
+    }
+    i{
+        font-size:60px;
+    }
+    .btn_barra{
+        display:flex !important;
+        height:100%;
+        justify-content: center;
+        align-items: center;
+    }
+    .bar_links{
+        background-color: #fff;
+        position: absolute;
+        top: 80px;
+        left: 0px;
+        height: auto;
+        width: 230px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        z-index: 100;
+        border-radius: 0px 0px 20px 0px;
+    }
+    .bar_links ul{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 0px;
+        margin: 30px 0px;
+    }
+    .bar_links ul a{
+        margin: 10px 10%;
+        width: 80%;
+        align-items: center;
+        border-bottom: solid 2px #000000;  
+    }
+
+    li{
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 25px;
+        line-height: 15px;
+        color: #000000;
+    }
+    /*--------------------------------footer---------------------*/
+    footer{
+        width: 100%;
+    }
+    .footer_sup{
+        display: flex !important;
+        align-items: center;
+        height:350px;
+        
+        padding: 30px 20px;
+    }
+    .footer_sup_items{
+        display: none !important;
+    }
+    .footer_sup_title{
+        margin: 0px;
+    }
+    h1{
+        text-align: center;
+    }
+    p{
+        text-align: center;
+    }
+
+}
