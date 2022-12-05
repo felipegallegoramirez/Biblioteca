@@ -1,0 +1,57 @@
+
+<div class="img-container">
+    <img (click)="photoInput1.click()"  [src]="photoSelected[0] ">
+    <p (click)="photoInput1.click()">Agregar la foto 1</p>
+    <input #photoInput1  (change)="onPhotoSelected($event,0)" id="foto1" type="file" accept="image/png, image/jpeg"  style="visibility: hidden;"/>
+
+</div>
+<div class="img-container">
+    <img (click)="photoInput2.click()"  [src]="photoSelected[1] ">
+    <p (click)="photoInput2.click()">Agregar la foto 2</p>
+    <input #photoInput2  (change)="onPhotoSelected($event,1)" id="foto2" type="file" accept="image/png, image/jpeg"  style="visibility: hidden;"/>
+
+</div>
+<div class="img-container">
+    <img (click)="photoInput3.click()"  [src]="photoSelected[2] ">
+    <p (click)="photoInput3.click()">Agregar la foto 3</p>
+    <input #photoInput3  (change)="onPhotoSelected($event,2)" id="foto3" type="file" accept="image/png, image/jpeg"  style="visibility: hidden;"/>
+
+</div>
+<div class="img-container">
+    <img (click)="photoInput4.click()"  [src]="photoSelected[3] ">
+    <p (click)="photoInput4.click()">Agregar la foto 4</p>
+    <input #photoInput4  (change)="onPhotoSelected($event,3)" id="foto4" type="file" accept="image/png, image/jpeg"  style="visibility: hidden;"/>
+</div>
+
+
+  <div class="central">
+    <div class="area">
+      <p>Resumen</p>
+      <textarea id="texto1"></textarea>
+    </div>
+
+    <div class="area">
+      <p>Mision</p>
+      <textarea id="texto2"></textarea>
+    </div>
+
+    <div class="area">
+      <p>Vision</p>
+      <textarea id="texto3"></textarea>
+    </div>
+    <div class="img-container">
+      <img (click)="photoInput5.click()"  [src]="photoSelected[4] ">
+      <p (click)="photoInput5.click()">Agregar la foto 5</p>
+      <input #photoInput5  (change)="onPhotoSelected($event,4)" id="foto5" type="file" accept="image/png, image/jpeg"  style="visibility: hidden;"/>
+  </div>
+
+  <div class="img-container">
+    <img (click)="photoInput6.click()"  [src]="photoSelected[5] ">
+    <p (click)="photoInput6.click()">Agregar la foto 6</p>
+    <input #photoInput6  (change)="onPhotoSelected($event,5)" id="foto6" type="file" accept="image/png, image/jpeg"  style="visibility: hidden;"/>
+</div>
+
+
+<div class="div_submit">
+	<button class="submit" (click)="enviar()">Publicar</button>
+</div>

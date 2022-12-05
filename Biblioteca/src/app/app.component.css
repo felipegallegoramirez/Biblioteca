@@ -1,6 +1,8 @@
 h2{
-    font-size: 14px;
+    font-size: 30px;
+    width: 150px;
 }
+
 
 
 nav{
@@ -25,7 +27,7 @@ nav *{
     position: relative;
     margin: 0px;
     color: white;
-    z-index: 100;
+    z-index: 99;
 }
 .logo > .nombre {
     margin: 20px 10px;
@@ -33,7 +35,7 @@ nav *{
 .logo img{
     position: absolute;
     z-index: 0;
-    width: 150px;
+    width: 160px;
 }
 ul{
     text-decoration: none;
@@ -102,8 +104,33 @@ router-outlet{
 .btn_barra{
     display: none !important;
 }
+.responsive{
+    visibility: hidden;
+}
 
-@media screen and (max-width:600px) {
+@media screen and (max-width:900px) {
+    .background{
+        position: fixed;
+        top: 0px;
+        width: 100vw;
+        height: 500vh;
+        background-color: #000000aa;
+        z-index: 99;
+    }
+    .background .oculto{
+        visibility: hidden;
+    }
+    .oculto{
+        transition: 1s;
+        top:-1000px !important;
+    }
+
+    h2{
+        font-size: 20px;
+    }
+    .responsive{
+        visibility: visible;
+    }
     .links{
         display: none !important;
     }
@@ -116,13 +143,14 @@ router-outlet{
         justify-content: center;
         align-items: center;
     }
-    .bar_links{
+    .responsive{
+        transition: 1s;
         background-color: #fff;
         position: absolute;
-        top: 80px;
+        top: 0px;
         left: 0px;
         height: auto;
-        width: 230px;
+        width: 100%;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -130,7 +158,13 @@ router-outlet{
         z-index: 100;
         border-radius: 0px 0px 20px 0px;
     }
-    .bar_links ul{
+    .responsive>h2{
+        width: 100%;
+        font-size: 30px;
+        text-align: center;
+        cursor: pointer;
+    }
+    .responsive ul{
         width: 100%;
         display: flex;
         flex-direction: column;
@@ -138,7 +172,7 @@ router-outlet{
         padding: 0px;
         margin: 30px 0px;
     }
-    .bar_links ul a{
+    .responsive ul a{
         margin: 10px 10%;
         width: 80%;
         align-items: center;
@@ -170,9 +204,7 @@ router-outlet{
     .footer_sup_title{
         margin: 0px;
     }
-    h1{
-        text-align: center;
-    }
+
     p{
         text-align: center;
     }

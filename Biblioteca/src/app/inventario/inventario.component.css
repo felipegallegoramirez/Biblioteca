@@ -1,7 +1,9 @@
 .central{
     margin: 200px auto;
-    width: 1400px;
+    max-width: 1500px;
+    width: 90%;
     min-height: 500px;
+    overflow-x: scroll;
 }
 .titles{
     display: grid;
@@ -26,7 +28,7 @@
 }
 
 .items >div,p{
-    width: 100px;
+    max-width: 200px;
 }
 
 .items>div button{

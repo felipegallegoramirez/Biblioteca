@@ -1,6 +1,7 @@
 .consult{
-    margin: 80px auto;
-    width: 764px;
+    margin: 80px 10%;
+    width: 80%;
+    text-align: center;
 }
 .consult p{
     width: 120px;
@@ -20,9 +21,10 @@
 
 .consult input:focus{
     border: black;
+    outline: 3px solid #023855;
 }
 .consult button{
-    background-color: #2C511A;
+    background-color: #023855;
     width: 100px;
     border: none;
     height: 30px;
@@ -32,9 +34,10 @@
 
 .consult button:active{
     background-color: white;
-    outline: 3px solid #2C511A;
+    outline: 3px solid #023855;
 
 }
+
 
 
 .consult *{
@@ -47,7 +50,7 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     margin: auto;
-    width: 1400px;
+    max-width: 1300px;
     grid-gap: 40px;
 }
 
@@ -74,7 +77,7 @@
 .card_detalles{
     visibility: hidden;
     position: absolute;
-    background-color: #091404;
+    background-color: #023855;
     height: 300px;
     width: 300px;
     opacity: 0;
@@ -88,33 +91,82 @@
     margin: 45% 0px;
 }
 
-.grid >:nth-child( 7 ){
-    grid-column: 1;
-    grid-row: 4 / 6;
+
+@media (min-width: 1200px) {
+    .grid >:nth-child( 7 ){
+        grid-column: 1;
+        grid-row: 4 / 6;
+    }
+    .grid >:nth-child( 7 ) img{
+        width: 300px;
+        height: 700px;
+    }
+    .grid >:nth-child( 7 )  .card_detalles{
+        width: 300px;
+        height: 700px;
+    }
+    
+    .grid >:nth-child( 7 )  .card_detalles p{
+        margin: 100% 0px;
+    }
+    
+    .grid >:nth-child( 8 ){
+        grid-column: 3 / 5;
+        grid-row: 2 / 4;
+    }
+    
+    .grid >:nth-child( 8 ) >img{
+        width: 660px;
+        height: 700px;
+    }
+    .grid >:nth-child( 8 ) .card_detalles{
+        width: 660px;
+        height: 700px;
+    }
+    
 }
-.grid >:nth-child( 7 ) img{
-    width: 300px;
-    height: 700px;
-}
-.grid >:nth-child( 7 )  .card_detalles{
-    width: 300px;
-    height: 700px;
+@media (max-width: 1200px) {
+    .consult {
+        margin-top: 100px;
+    }
+    .consult p{
+        display: inline;
+       }
+    .consult >button{
+        width: 50px;
+    }   
+
+    .consult input{
+        width: 200px;
+
+    }
+
 }
 
-.grid >:nth-child( 7 )  .card_detalles p{
-    margin: 100% 0px;
-}
 
-.grid >:nth-child( 8 ){
-    grid-column: 3 / 5;
-    grid-row: 2 / 4;
-}
 
-.grid >:nth-child( 8 ) >img{
-    width: 660px;
-    height: 700px;
-}
-.grid >:nth-child( 8 ) .card_detalles{
-    width: 660px;
-    height: 700px;
-}
+
+
+@media (max-width: 1200px) and (min-width: 800px) {
+
+    .grid{
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+  }
+
+  @media (max-width: 800px) and (min-width: 650px) {
+
+    .grid{
+        grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  @media (max-width: 650px) {
+
+    .grid{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .grid>div{
+        margin-left: calc((100% - 300px) / 2);
+    }
+  }

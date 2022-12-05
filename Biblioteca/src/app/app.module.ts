@@ -21,6 +21,7 @@ import { InputinventarioComponent } from './inputinventario/inputinventario.comp
 import { AboutComponent } from './about/about.component';
 import { NotificacionComponent } from './notificacion/notificacion.component';
 import { LoginComponent } from './login/login.component';
+import { InputaboutComponent } from './inputabout/inputabout.component';
 
 const routes: Routes = [
   { path: 'GaleriaPlantas', component: GaleriaPlantaComponent },
@@ -57,7 +58,8 @@ const routes: Routes = [
     InventarioComponent,
     InputinventarioComponent,
     NotificacionComponent,
-    LoginComponent
+    LoginComponent,
+    InputaboutComponent
   ],
   imports: [
     BrowserModule,

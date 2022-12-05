@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import about from '../Interfaces/about';
+import { CentralService } from '../Services/central.service';
 
 @Component({
   selector: 'app-about',
@@ -6,14 +8,21 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./about.component.css']
 })
 export class AboutComponent implements OnInit {
+  about:about|any
 
-
-  constructor() { 
+  constructor(private CentralService:CentralService) { 
 
   }
 
   ngOnInit(): void {
+  this.llenar()
 
+
+  }
+  async llenar(){    
+    var a = await this.CentralService.getabout()
+    var info = a.data() as about
+    this.about =info
 
   }
 

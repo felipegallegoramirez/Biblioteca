@@ -35,18 +35,18 @@ export class CentralService {
 
 
   async getplant(id:string): Promise<any> {
-    const aveRef = doc(this.firestore, "plants", id)
-    return  await getDoc(aveRef);
+    const plantRef = doc(this.firestore, "plants", id)
+    return  await getDoc(plantRef);
   }
 
-  async putplant(id:string,ave:any): Promise<any> {
-    const aveRef = doc(this.firestore, "plants", id)
-    return  await updateDoc(aveRef,ave);
+  async putplant(id:string,plant:any): Promise<any> {
+    const plantRef = doc(this.firestore, "plants", id)
+    return  await updateDoc(plantRef,plant);
   }
 
   async deleteplant(id: string) {
-    const aveRef=doc(this.firestore, "plants", id)
-    return  await deleteDoc(aveRef);
+    const plantRef=doc(this.firestore, "plants", id)
+    return  await deleteDoc(plantRef);
   }
 
 
@@ -67,6 +67,22 @@ export class CentralService {
       console.log(url)
       return [url,""+a]
   }
+
+  async uploadimagenAbout(file:File,id:String): Promise<string>{
+    const imgRef = ref(this.storage, `images/${String}`);
+
+
+     let x = await uploadBytes(imgRef, file)
+      .then(response => {
+        console.log(response)
+        return response
+      })
+      .catch(error => console.log(error));
+      const url = await getDownloadURL(imgRef);
+      console.log(url)
+      return url
+  }
+
   async deleteimagen(id:string){
     const imgRef = ref(this.storage, `images/${id}`);
     await deleteObject(imgRef)
@@ -113,18 +129,18 @@ export class CentralService {
 
 
   async getinsecto(id:string): Promise<any> {
-    const aveRef = doc(this.firestore, "insectos", id)
-    return  await getDoc(aveRef);
+    const insectoRef = doc(this.firestore, "insectos", id)
+    return  await getDoc(insectoRef);
   }
 
-  async putinsecto(id:string,ave:any): Promise<any> {
-    const aveRef = doc(this.firestore, "insectos", id)
-    return  await updateDoc(aveRef,ave);
+  async putinsecto(id:string,insecto:any): Promise<any> {
+    const insectoRef = doc(this.firestore, "insectos", id)
+    return  await updateDoc(insectoRef,insecto);
   }
 
   async deleteinsecto(id: string) {
-    const aveRef=doc(this.firestore, "insectos", id)
-    return  await deleteDoc(aveRef);
+    const insectoRef=doc(this.firestore, "insectos", id)
+    return  await deleteDoc(insectoRef);
   }
 
 
@@ -141,20 +157,33 @@ export class CentralService {
     }
   
     async getinventario(id:string): Promise<any> {
-      const aveRef = doc(this.firestore, "inventarios", id)
-      return  await getDoc(aveRef);
+      const inventarioRef = doc(this.firestore, "inventarios", id)
+      return  await getDoc(inventarioRef);
     }
   
-    async putinventario(id:string,ave:any): Promise<any> {
-      const aveRef = doc(this.firestore, "inventarios", id)
-      return  await updateDoc(aveRef,ave);
+    async putinventario(id:string,inventario:any): Promise<any> {
+      const inventarioRef = doc(this.firestore, "inventarios", id)
+      return  await updateDoc(inventarioRef,inventario);
     }
   
     async deleteinventario(id: string) {
-      const aveRef=doc(this.firestore, "inventarios", id)
-      return  await deleteDoc(aveRef);
+      const inventarioRef=doc(this.firestore, "inventarios", id)
+      return  await deleteDoc(inventarioRef);
     }
 
+
+
+    //about us
+
+    async getabout(): Promise<any> {
+      const aboutRef = doc(this.firestore, "about", "1")
+      return  await getDoc(aboutRef);
+    }
+
+    async putabout(about:any): Promise<any> {
+      const aboutRef = doc(this.firestore, "about", "1")
+      return  await updateDoc(aboutRef,about);
+    }
   
   }
 

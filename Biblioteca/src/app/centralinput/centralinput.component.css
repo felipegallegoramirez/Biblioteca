@@ -33,5 +33,9 @@
 }
 
 .selected4{
-    outline: 4px solid #465902;
+    outline: 4px solid #F24F1B;
+}
+
+.selected5{
+    outline: 4px solid #3c9af1;
 }

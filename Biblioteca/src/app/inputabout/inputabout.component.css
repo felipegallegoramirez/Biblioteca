@@ -1,0 +1,106 @@
+.ocultar{
+	visibility: hidden;
+}
+
+input:focus{
+	outline: 1px solid #3c9af1;
+}
+input:hover{
+	border-color: black;
+}
+p{
+	font-weight: bold;
+	margin: 10px 0px;
+}
+
+input[type=text]{
+ padding: 5px;
+ box-sizing: border-box;
+ border-radius: 12px;
+ border: 1px solid black;
+}
+
+
+textarea{
+	padding: 5px;
+	box-sizing: border-box;
+	border-radius: 12px;
+	border: 1px solid black;
+}
+
+textarea:active{
+	outline: #3c9af1;
+	}
+
+textarea:focus{
+	outline: 1px solid #3c9af1;
+	}
+	textarea:hover{
+		border-color: black;
+	}
+
+.img-container{
+    border: 1px solid black;
+    display: inline-block;
+    text-align: center;
+}
+ img{
+	width: 150px;
+	height: 150px;
+	object-fit: contain;
+}
+
+.central{
+	padding: 10px;
+}
+.area textarea{
+	width: 100%;
+	resize: none;
+	height: 150px;
+}
+
+.bot{
+	padding: 10px;
+}
+
+.bot .title{
+ font-size: 24px;
+}
+
+.bot .grid{
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-gap: 10px;
+}
+
+.bot .grid .input input{
+	width: 100%;
+	background-color: #ddd;
+}
+
+.central .input input{
+	width: 100%;
+}
+
+.submit{
+	background-color: #3c9af1;
+	margin: auto;
+	color: white;
+	padding: 10px;
+	width: 200px;
+	border: none;
+	border-radius: 20px;
+}
+.div_submit{
+	width: 100%;
+	margin: 40px 0px;
+	text-align: center;
+}
+.submit:active{
+	background-color: white;
+	color: #3c9af1;
+	padding: 10px;
+	width: 200px;
+	outline: 2px solid #3c9af1;
+	border-radius: 20px;
+}

@@ -216,13 +216,11 @@ export class InputavesComponent implements OnInit {
       this.NotificacionesService.noti.emit(mensaje)
     }
     return status
-
-
-
-
-
-
   }
+
+
+
+
 
   async enviar(): Promise<void> {
     const foto = <HTMLInputElement>document.querySelector('#foto');
@@ -249,7 +247,6 @@ export class InputavesComponent implements OnInit {
         url=data[0]
         imagenid= data[1]
       }
-
     }
 
     const nombre = <HTMLInputElement>document.querySelector('#nombre');
@@ -314,7 +311,7 @@ export class InputavesComponent implements OnInit {
         if(this.ave.url!=envio.url && this.ave.imagenid!=envio.imagenid){
           await this.CentralService.deleteimagen(this.ave.imagenid)
         }
-        this.Router.navigate(['/VerAves/'+response.id])
+        this.Router.navigate(['/VerAves/'+this.id])
 
       }else{
         if(envio.url!=undefined || envio.url!=""){

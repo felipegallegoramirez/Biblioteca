@@ -268,7 +268,7 @@ margin:0px 5px;
 
 /*-------------------------------------- phone ------------------------------------*/
 
-@media screen and (max-width:600px) {
+@media screen and (max-width:800px) {
     article{
         width: 100%;
         min-width: 300px;

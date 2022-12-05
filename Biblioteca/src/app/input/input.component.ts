@@ -315,7 +315,7 @@ export class InputComponent implements OnInit {
         if(this.plant.url!=envio.url && this.plant.imagenid!=envio.imagenid){
           await this.CentralService.deleteimagen(this.plant.imagenid)
         }
-        this.Router.navigate(['/VerPlantas/'+response.id])
+        this.Router.navigate(['/VerPlantas/'+this.id])
 
       }else{
         if(envio.url!=undefined || envio.url!=""){

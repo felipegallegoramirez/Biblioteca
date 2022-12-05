@@ -15,10 +15,28 @@
       <a routerLink="/Inventario"><li>Insumos</li></a>
     </ul>
   </div>
+
+
+
   <div class="btn_barra">
-      <i (click)="barra()" class="material-symbols-outlined">Menu</i>
+      <i (click)="mostrar()" class="material-symbols-outlined">Menu</i>
   </div>
 </nav>
+<div id="responsive" class="responsive oculto">
+  <h2>Jose Horacio Betancur</h2>
+
+  <ul>
+    <a routerLink="/About-us"><li>Sobre Nosotros</li></a>
+    <a routerLink="/GaleriaPlantas"><li>Plantas</li></a>
+    <a routerLink="/GaleriaAves"><li>Aves</li></a>
+    <a routerLink="/GaleriaInsectos"><li>Insectos</li></a>
+    <a routerLink="/Inventario"><li>Insumos</li></a>
+  </ul>
+  <h2 (click)="cerrar()">Cerrar</h2>
+</div>
+<div (click)="cerrar()" id="back" class="background oculto">
+
+</div>
 <div class="cont">
 <router-outlet ><!--Aca se muestra las paginas--></router-outlet>
 </div>

@@ -12,19 +12,24 @@ export class VistaInsectosComponent implements OnInit {
 
   constructor(private CentralService:CentralService, public activatedRoute:ActivatedRoute) { }
   items:insecto[]=[]
-  real:any 
+  real:any
+  id:string=""
 
   ngOnInit(): void {
     this.activatedRoute.params.subscribe(params => { 
-      var id= params['id'];
-    this.CentralService.getinsectos().subscribe(insecto =>{
-      this.items=insecto
-      var a=this.items.find((x:insecto) =>x.id==id)
-      if(a!=undefined){this.real = a}
-        
-  
-      
-    })
-  })
-  }
+     this.id = params['id'];
+     if (this.id) {
+       this.info()
+     }
+     
+
+
+ })
+ }
+
+ async info(){
+   var a = await this.CentralService.getinsecto(this.id)
+   var info = a.data() as insecto
+   this.real=info
+ }
 }

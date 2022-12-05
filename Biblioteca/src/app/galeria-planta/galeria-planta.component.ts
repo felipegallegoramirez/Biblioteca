@@ -9,14 +9,24 @@ import { CentralService } from '../Services/central.service';
 })
 export class GaleriaPlantaComponent implements OnInit {
 
-  constructor(private CentralService:CentralService) { }
+  constructor(private CentralService:CentralService ) { }
   items:plant[]=[]
+  itemsg:plant[]=[]
   ngOnInit(): void {
-    this.CentralService.getplants().subscribe(plants =>{
-      this.items=plants
+    this.CentralService.getplants().subscribe(plant =>{
+      this.items=plant
+      this.itemsg=plant
     })
+  }
 
-    
+  busqueda(){
+    var a = <HTMLInputElement>document.getElementById("buscar")
+    if (a.value?.length>2){
+    this.items=this.itemsg.filter(x=>x.nombre?.toLowerCase().includes(a.value.toLowerCase()))
+    console.log(a)
+    }else{
+      this.items=this.itemsg
+    }
   }
 
 }

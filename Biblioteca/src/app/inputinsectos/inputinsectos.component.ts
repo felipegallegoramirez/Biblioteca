@@ -64,7 +64,7 @@ export class InputinsectosComponent implements OnInit {
 
   async eliminar(){
     await this.CentralService.deleteimagen(this.insecto.imagenid)
-    console.log(await this.CentralService.deleteave(this.id))
+    console.log(await this.CentralService.deleteinsecto(this.id))
     this.Router.navigate(['/Login/1'])
   }
 
@@ -311,7 +311,7 @@ export class InputinsectosComponent implements OnInit {
         if(this.insecto.url!=envio.url && this.insecto.imagenid!=envio.imagenid){
           await this.CentralService.deleteimagen(this.insecto.imagenid)
         }
-        this.Router.navigate(['/VerInsectos/'+response.id])
+        this.Router.navigate(['/VerInsectos/'+this.id])
 
       }else{
         if(envio.url!=undefined || envio.url!=""){
@@ -349,7 +349,7 @@ export class InputinsectosComponent implements OnInit {
         imagenid:imagenid
       };
       if(this.comprobar(envio2)){
-        response = await this.CentralService.addave(envio2);
+        response = await this.CentralService.addinsecto(envio2);
         this.Router.navigate(['/VerInsectos/'+response.id])
         
       }else{

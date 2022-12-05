@@ -1,3 +1,81 @@
+button{
+    background-color: #F2A922;
+    padding: 10px;
+    font-weight: bold;
+    font-size: 20px;
+    width: 100px;
+    border: none;
+    border-radius: 20px;
+    display: inline-block;
+    margin: 0px 10px;
+    position: absolute;
+    color: white;
+    right: 100px;
+    cursor: pointer;
+    visibility: hidden;
+}
+p{
+    hyphens: manual;
+}
+
+
+.imagen{
+    text-align: center;
+}
+.sup_left img{
+    text-align: center;
+    width: 90vw;
+    max-width: 500px;
+    height: 90vw;
+    max-height: 500px;
+    margin: auto;
+}
+.main{
+padding: 10px;
+box-sizing: border-box;
+}
+b,h2{
+    font-size: 30px;
+}
+
+
+.grid{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+}
+.grid > div {
+    background-color: #D9D9D9;
+    border-radius: 20px;
+    margin: 5px 10px;
+    padding: 10px 10px;
+}
+
+.grid > div  > p{
+
+    margin: 0px 0px;
+    padding: 0px 0px;
+    display: inline-block;
+}
+
+.dato_interesante{
+    background-color: #F2A922;
+    border-radius: 20px;
+    margin: 5px 10px;
+    padding: 10px 10px;
+}
+
+.dato_interesante >p{
+color: white;
+margin: 0px;
+}
+
+
+
+@media (min-width: 1200px) {
+    button{
+        visibility: visible;
+    }
+
 .sup{
     display: flex;
     vertical-align: top;
@@ -39,7 +117,7 @@ display: inline-block;
 }
 .inf > div {
     box-sizing: border-box;
-    height: 500px;
+    height: max-content;
     padding: 0px 10px;
 }
 .inf_left{
@@ -72,14 +150,5 @@ display: inline-block;
 font-weight: bold;
 }
 
-.dato_interesante{
-    background-color: #465902;
-    border-radius: 20px;
-    margin: 5px 10px;
-    padding: 10px 10px;
-}
 
-.dato_interesante >p{
-color: white;
-margin: 0px;
 }

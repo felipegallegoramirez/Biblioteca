@@ -9,14 +9,24 @@ import { CentralService } from '../Services/central.service';
 })
 export class GaleriaInsectosComponent implements OnInit {
 
-  constructor(private CentralService:CentralService) { }
+  constructor(private CentralService:CentralService ) { }
   items:insecto[]=[]
+  itemsg:insecto[]=[]
   ngOnInit(): void {
     this.CentralService.getinsectos().subscribe(insecto =>{
       this.items=insecto
+      this.itemsg=insecto
     })
+  }
 
-    
+  busqueda(){
+    var a = <HTMLInputElement>document.getElementById("buscar")
+    if (a.value?.length>2){
+    this.items=this.itemsg.filter(x=>x.nombre?.toLowerCase().includes(a.value.toLowerCase()))
+    console.log(a)
+    }else{
+      this.items=this.itemsg
+    }
   }
 
 }

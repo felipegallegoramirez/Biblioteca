@@ -30,14 +30,19 @@ export class AppComponent {
 
 
   }
-  barra() {
-    
-    let div = <HTMLFormElement> document.getElementById("menu");
-    console.log(div.className)
-    if(div.className == "links"){
-      div.className = "bar_links"
-    }else{
-      div.className = "links"
-    }
+  
+  mostrar(){
+    const x = document.getElementById("responsive")
+    const y = document.getElementById("back")
+    x?.classList.remove("oculto")
+    y?.classList.remove("oculto")
   }
+  cerrar(){
+    const x = document.getElementById("responsive")
+    const y = document.getElementById("back")
+    x?.classList.add("oculto")
+    y?.classList.add("oculto")
+
+  }
+
 }
