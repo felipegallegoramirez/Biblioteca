@@ -13,7 +13,6 @@ article{
     
 }
 
-/*--------------------------------------article 1 ------------------------------------*/
 .article1{
     height:auto;
     margin-bottom: 80px;
@@ -93,7 +92,7 @@ ul{
   background-color: #465902;
 }
 
-/*--------------------------------------article 2 ------------------------------------*/
+
 .article2{
     height: auto;
     display: flex;
@@ -163,7 +162,7 @@ margin:0px 5px;
     bottom: 0px;
     right: 0px;
 }
-/*--------------------------------------article 3 ------------------------------------*/
+
 
 .article3{
     height: auto;
@@ -177,7 +176,7 @@ margin:0px 5px;
 }
 
 
-/*--------------------------------------article 4 y 5 ------------------------------------*/
+
 .article5, .article4{
     display: flex;
     align-items: center;
@@ -200,7 +199,7 @@ margin:0px 5px;
 }
 
 
-/*-------------------------------------- Boton ------------------------------------*/
+
 
 .btn_crear{
     background-color: #465902;
@@ -227,7 +226,7 @@ margin:0px 5px;
     outline: 2px solid #465902;
     border-radius: 20px;
 }
-/*-------------------------------------- fondos ------------------------------------*/
+
 
 .fondo1{
     z-index: 1;
@@ -266,15 +265,12 @@ margin:0px 5px;
 }
 
 
-/*-------------------------------------- phone ------------------------------------*/
-
 @media screen and (max-width:800px) {
     article{
         width: 100%;
         min-width: 300px;
     }
 
-    /*--------------------------------------article 1 ------------------------------------*/
     .article1{
         margin-top: 20px;
         height:auto;
@@ -291,7 +287,6 @@ margin:0px 5px;
         margin: 20px 0;
     }
 
-    /*--------------------------------------article 2 ------------------------------------*/
     .article2{
         height: auto;
         display: flex;
@@ -310,7 +305,7 @@ margin:0px 5px;
     .article2 img{
         height: 150px;
     }
-    /*--------------------------------------article 3 ------------------------------------*/
+
 
     .article3{
         background-color: rgba(255, 255, 255, 0.588)
@@ -319,7 +314,7 @@ margin:0px 5px;
         margin: 5px 3%;
     }
 
-    /*--------------------------------------article 4 y 5 ------------------------------------*/
+
     .article4{
         background-color: rgba(255, 255, 255, 0.588);
         height: auto;
@@ -343,12 +338,10 @@ margin:0px 5px;
  
     }
 
-    /*-------------------------------------- boton ------------------------------------*/
     .crear{
         display: none;
     }
 
-    /*-------------------------------------- fondos ------------------------------------*/
     .fondo1, .fondo3, .fondo4{
         width: 150px;
         height: auto;
@@ -358,7 +351,7 @@ margin:0px 5px;
         top: 500px;
     }
     .fondo2{
-        /*clip-path: inset( 0px calc(937.95px - 100vw) 0px 0px);*/
+
         top: 900px;
         width: 100vw;
         height:auto;
